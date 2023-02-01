@@ -1,0 +1,9 @@
+<div *ngIf="myInterface">
+    <!--Line below: Unresolved variable myId -->
+    <div *ngFor="let x of myInterface.items" [id]="x.myId"></div>
+
+    <ng-container *ngFor="let x of myInterface.items">
+        <!--Line below: Unresolved variable myId -->
+        <div [id]="x.myId"></div>
+    </ng-container>
+</div>
